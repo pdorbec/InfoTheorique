@@ -1,7 +1,13 @@
 #! /usr/bin/env python3
 # -*- coding: utf-8 -*-
-from .vertex import Vertex
-class Graph:
+"""Graphs
+
+This module is intended to modelize graphs,
+directed or not, with no multiple edges.
+"""
+from vertex import Vertex
+
+class Graph(object):
     """
     A class for simple graphs.
     The graphs are encoded as a adjacency list, with weights on the edges.
@@ -65,7 +71,7 @@ class Graph:
         Updates the weight of the edge.
         """
 
-    def add_arc(vertex1, vertex2, weight):
+    def add_arc(self, vertex1, vertex2, weight):
         """
         Adds an arc from vertex1 to vertex2
         @param vertex1 : Origin of the arc.
@@ -73,12 +79,10 @@ class Graph:
         @param weight : an optionnal weight to the edge, default value = 1.
         """
 
-    def get_neighbors(vertex):
+    def get_neighbors(self, vertex):
         """
         Returns a list of the (out)neighbors of the vertex.
         """
-
-
 
     def display(self):
         """
